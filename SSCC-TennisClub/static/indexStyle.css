@@ -1,0 +1,89 @@
+/*
+font-family: 'Raleway', sans-serif;
+Bleu : #0065FC 
+Bleu clair : #DEEBFF  
+Gris fond : #F2F2F2 
+*/
+
+body{
+    font-family: arial, sans-serif;
+    background-color: #F2F2F2 ;
+    margin: O;
+    padding: 0;
+}
+
+ul{
+    list-style-type:none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.headerContainer{
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mainNavContainer{
+    display: flex;
+}
+
+.primaryMenu{
+display: flex;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.primaryMenu > li{
+    position: relative;
+}
+
+.primaryMenu > li > a{
+    display: block;
+    padding: 14px 20px;
+}
+
+.primaryMenu > li > a:hover {
+    background-color: #DEEBFF ;
+}
+
+.subMenu, .underSubMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+.subMenu > li, .underSubMenu > li{
+    position: relative;
+}
+
+.subMenu > li > a, .underSubMenu > li > a{
+    padding: 12px 16px;
+    display: block;
+    white-space: nowrap;
+}
+
+.subMenu > li > a:hover, .underSubMenu > li > a:hover{
+    background-color: #DEEBFF;
+}
+
+.primaryMenu > li:hover > .subMenu, .subMenu > li:hover > .underSubMenu{
+    display: block;
+    margin-top: 40px;
+    bottom: 100%;
+    top: 0;
+}
+
+.subMenu > li:hover > .underSubMenu{
+    display: block;
+    left: 100%;
+    top: -40px;
+}
